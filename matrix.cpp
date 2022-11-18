@@ -46,6 +46,7 @@ using namespace std;
         return;
     }
     matrix matrix::add(const matrix inmatrix)const{
+        int i,j;
         matrix out;
         if(this->size==inmatrix.size){
             for (i = 0; i < this->size; i++)
@@ -61,6 +62,7 @@ using namespace std;
     }
     matrix matrix::sub(const matrix inmatrix)cosnt{
         matrix out;
+        int i,j;
         if(this->size==inmatrix.size){
             for (i = 0; i < this->size; i++)
         {
@@ -75,12 +77,16 @@ using namespace std;
     }
     matrix matrix::mult(const matrix inmatrix)const{
         matrix out;
+        int i,j,z;
         if(this->size==inmatrix.size){
             for (i = 0; i < this->size; i++)
         {
             for (j = 0; j < this->size; j++)
-            {
-                out.data[i][j]=this->data[i][j]*inmatrix.data[i][j];
+            {   
+                for (z = 0; z < this->size; z++)
+                {
+                    out.data[i][j]+=this->data[i][k]*inmatrix.data[k][j];
+                }
             }
         }    
         return;
