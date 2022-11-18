@@ -9,7 +9,7 @@ class matrix{
     matrix();
     void setzize(unsigned int size);
     int getsize()const;
-    void eingabe()const;
+    void eingabe();
     void ausgabe()const;
     matrix add(const matrix inmatrix)const;
     matrix sub(const matrix inmtarix)const;

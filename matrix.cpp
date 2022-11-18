@@ -15,7 +15,7 @@ using namespace std;
     }
     void matrix::setzize(unsigned int newsize){
        if(2< newsize> N){
-        cout << "Size nicht im Wertebereich";
+        cout << "Size nicht im Wertebereich"<<endl;
        }
         this->size=size;
         return;
@@ -34,13 +34,13 @@ using namespace std;
         }    
         return;
     }
-    void matrix::ausgabe(){
+    void matrix::ausgabe()const{
         int i,j;
         for (i = 0; i < this->size; i++)
         {
             for (j = 0; j < this->size; j++)
             {
-                cout <<this->data[i][j]+"\n";
+                cout <<this->data[i][j]<<endl;
             }
         }    
         return;
