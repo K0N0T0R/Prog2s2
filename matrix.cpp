@@ -45,7 +45,7 @@ using namespace std;
         }    
         return;
     }
-    matrix matrix::add(const matrix inmatrix){
+    matrix matrix::add(const matrix inmatrix)const{
         matrix out;
         if(this->size==inmatrix.size){
             for (i = 0; i < this->size; i++)
@@ -53,6 +53,34 @@ using namespace std;
             for (j = 0; j < this->size; j++)
             {
                 out.data[i][j]=this->data[i][j]+inmatrix.data[i][j];
+            }
+        }    
+        return;
+        }else cout << "size stimmt nicht überein"
+        return out;
+    }
+    matrix matrix::sub(const matrix inmatrix)cosnt{
+        matrix out;
+        if(this->size==inmatrix.size){
+            for (i = 0; i < this->size; i++)
+        {
+            for (j = 0; j < this->size; j++)
+            {
+                out.data[i][j]=this->data[i][j]-inmatrix.data[i][j];
+            }
+        }    
+        return;
+        }else cout << "size stimmt nicht überein"
+        return out;
+    }
+    matrix matrix::mult(const matrix inmatrix)const{
+        matrix out;
+        if(this->size==inmatrix.size){
+            for (i = 0; i < this->size; i++)
+        {
+            for (j = 0; j < this->size; j++)
+            {
+                out.data[i][j]=this->data[i][j]*inmatrix.data[i][j];
             }
         }    
         return;
